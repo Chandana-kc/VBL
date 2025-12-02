@@ -1,0 +1,313 @@
+{
+  "name": "VBL",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "name": "Sandila",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "Line 1",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Blowmoulding",
+              "typeId": "UDT_Blowmoulding",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "Machine_Status",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Speed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Downtime_Minutes",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Runtime_Minutes",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Status",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Target_Speed",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Energy",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Energy_Per_Bottle",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Power_Consumption",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Defects",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Thin_Wall_Defects",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Flash_Defects",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Misalignment_Defects",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Process_Parameters",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Mold_Temperature",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Preform_Temperature",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Stretch_Rod_Position",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Blow_Pressure",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Cycle_Time",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Filling_Capping",
+              "typeId": "UDT_FillingCapping",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "Process_Parameters",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Fill_Pressure",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Capping_Torque",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Product_Temperature",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Fill_Level",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "CO2_Level",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Machine_Status",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Capper_Status",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Filler_Status",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Runtime_Minutes",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Downtime_Minutes",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Production_Metrics",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Fill_Accuracy",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bottles_Filled",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Filling_Speed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bottles_Rejected",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Tanks",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Product_Tank_Level",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "CO2_Tank_Level",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "CIP_Tank_Level",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Defects",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Underfill_Count",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Cap_Missing_Loose",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Overfill_Count",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Labeling_Cooling",
+              "typeId": "UDT_LabelingCooling",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "Defects",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Missing_Labels",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Misaligned_Labels",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Wrinkled_Labels",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Energy",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Energy_Per_Bottle",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Power_Consumption",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Machine_Status",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Runtime_Minutes",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Downtime_Minutes",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Label_Roll_Length_Remaining",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Labeling_Status",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Cooling_Status",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Process_Parameters",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Label_Tension",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Cooling_Water_Temperature",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Cooling_Water_Flow",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Glue_Temperature",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Tunnel_Temperature",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,683 @@
+{
+  "name": "_types_",
+  "tags": [
+    {
+      "name": "UDT_Blowmoulding",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "ProcessParameters",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Preform_Temperature",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD0",
+              "engUnit": "°C",
+              "engLimitMode": "MinMax",
+              "engLow": 80.0,
+              "engHigh": 120.0
+            },
+            {
+              "name": "Blow_Pressure",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD4",
+              "engUnit": "bar",
+              "engLimitMode": "MinMax",
+              "engLow": 25.0,
+              "engHigh": 40.0
+            },
+            {
+              "name": "Stretch_Rod_Position",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD8",
+              "engUnit": "mm",
+              "engLimitMode": "MinMax",
+              "engLow": 120.0,
+              "engHigh": 180.0
+            },
+            {
+              "name": "Mold_Temperature",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD12",
+              "engUnit": "°C",
+              "engLimitMode": "MinMax",
+              "engLow": 15.0,
+              "engHigh": 22.0
+            },
+            {
+              "name": "Cycle_Time",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD16",
+              "engUnit": "seconds",
+              "engLimitMode": "MinMax",
+              "engLow": 3.5,
+              "engHigh": 5.0
+            }
+          ]
+        },
+        {
+          "name": "ProductionMetrics",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Bottles_Produced",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD20",
+              "engUnit": "count"
+            },
+            {
+              "name": "Bottles_Rejected",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD24",
+              "engUnit": "count"
+            },
+            {
+              "name": "Production_Rate",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD28",
+              "engUnit": "BPH",
+              "engLimitMode": "MinMax",
+              "engLow": 700.0,
+              "engHigh": 1000.0
+            },
+            {
+              "name": "Quality_Rate",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD32",
+              "engUnit": "%",
+              "engLimitMode": "MinMax",
+              "engLow": 98.0,
+              "engHigh": 100.0
+            },
+            {
+              "name": "OEE",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD36",
+              "engUnit": "%",
+              "engLimitMode": "MinMax",
+              "engLow": 50.0,
+              "engHigh": 95.0
+            }
+          ]
+        },
+        {
+          "name": "MachineStatus",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Status",
+              "tagType": "AtomicTag",
+              "dataType": "String",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBB40"
+            },
+            {
+              "name": "Speed",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD62",
+              "engUnit": "BPH",
+              "engLimitMode": "MinMax",
+              "engLow": 700.0,
+              "engHigh": 1000.0
+            },
+            {
+              "name": "Target_Speed",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD66",
+              "engUnit": "BPH",
+              "engLimitMode": "MinMax",
+              "engLow": 800.0,
+              "engHigh": 1000.0
+            },
+            {
+              "name": "Runtime_Minutes",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD70",
+              "engUnit": "minutes"
+            },
+            {
+              "name": "Downtime_Minutes",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD74",
+              "engUnit": "minutes"
+            }
+          ]
+        },
+        {
+          "name": "Defects",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Thin_Wall_Defects",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD78",
+              "engUnit": "count"
+            },
+            {
+              "name": "Misalignment_Defects",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD82",
+              "engUnit": "count"
+            },
+            {
+              "name": "Flash_Defects",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD86",
+              "engUnit": "count"
+            }
+          ]
+        },
+        {
+          "name": "Energy",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Power_Consumption",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD90",
+              "engUnit": "kW",
+              "engLimitMode": "MinMax",
+              "engLow": 20.0,
+              "engHigh": 60.0
+            },
+            {
+              "name": "Energy_Per_Bottle",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD94",
+              "engUnit": "kWh",
+              "engLimitMode": "MinMax",
+              "engLow": 0.03,
+              "engHigh": 0.08
+            },
+            {
+              "name": "Total_Energy_Consumed",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB100.DBD98",
+              "engUnit": "kWh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UDT_LabelingCooling",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "ProcessParameters",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Glue_Temperature",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD0",
+              "engUnit": "°C",
+              "engLimitMode": "MinMax",
+              "engLow": 140.0,
+              "engHigh": 170.0
+            },
+            {
+              "name": "Cooling_Water_Temperature",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD4",
+              "engUnit": "°C",
+              "engLimitMode": "MinMax",
+              "engLow": 10.0,
+              "engHigh": 18.0
+            },
+            {
+              "name": "Cooling_Water_Flow",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD8",
+              "engUnit": "LPM",
+              "engLimitMode": "MinMax",
+              "engLow": 60.0,
+              "engHigh": 120.0
+            },
+            {
+              "name": "Label_Tension",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD12",
+              "engUnit": "N",
+              "engLimitMode": "MinMax",
+              "engLow": 1.5,
+              "engHigh": 4.0
+            },
+            {
+              "name": "Tunnel_Temperature",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD16",
+              "engUnit": "°C",
+              "engLimitMode": "MinMax",
+              "engLow": 60.0,
+              "engHigh": 90.0
+            }
+          ]
+        },
+        {
+          "name": "ProductionMetrics",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Bottles_Labeled",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD20",
+              "engUnit": "count"
+            },
+            {
+              "name": "Labels_Rejected",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD24",
+              "engUnit": "count"
+            },
+            {
+              "name": "Labeling_Speed",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD28",
+              "engUnit": "BPH",
+              "engLimitMode": "MinMax",
+              "engLow": 700.0,
+              "engHigh": 1000.0
+            },
+            {
+              "name": "Label_Accuracy",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD32",
+              "engUnit": "%",
+              "engLimitMode": "MinMax",
+              "engLow": 97.0,
+              "engHigh": 100.0
+            },
+            {
+              "name": "OEE",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD36",
+              "engUnit": "%",
+              "engLimitMode": "MinMax",
+              "engLow": 50.0,
+              "engHigh": 95.0
+            }
+          ]
+        },
+        {
+          "name": "MachineStatus",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Labeling_Status",
+              "tagType": "AtomicTag",
+              "dataType": "String",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBB40"
+            },
+            {
+              "name": "Cooling_Status",
+              "tagType": "AtomicTag",
+              "dataType": "String",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBB62"
+            },
+            {
+              "name": "Runtime_Minutes",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD70",
+              "engUnit": "minutes"
+            },
+            {
+              "name": "Downtime_Minutes",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD74",
+              "engUnit": "minutes"
+            },
+            {
+              "name": "Label_Roll_Length_Remaining",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD78",
+              "engUnit": "meters"
+            }
+          ]
+        },
+        {
+          "name": "Defects",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Misaligned_Labels",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD82",
+              "engUnit": "count"
+            },
+            {
+              "name": "Missing_Labels",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD86",
+              "engUnit": "count"
+            },
+            {
+              "name": "Wrinkled_Labels",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD90",
+              "engUnit": "count"
+            }
+          ]
+        },
+        {
+          "name": "Energy",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Power_Consumption",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD94",
+              "engUnit": "kW",
+              "engLimitMode": "MinMax",
+              "engLow": 10.0,
+              "engHigh": 40.0
+            },
+            {
+              "name": "Energy_Per_Bottle",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD98",
+              "engUnit": "kWh",
+              "engLimitMode": "MinMax",
+              "engLow": 0.02,
+              "engHigh": 0.06
+            },
+            {
+              "name": "Total_Energy_Consumed",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB110.DBD102",
+              "engUnit": "kWh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UDT_FillingCapping",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "ProcessParameters",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Fill_Level",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD0",
+              "engUnit": "ml",
+              "engLimitMode": "MinMax",
+              "engLow": 490.0,
+              "engHigh": 510.0
+            },
+            {
+              "name": "Fill_Pressure",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD4",
+              "engUnit": "bar",
+              "engLimitMode": "MinMax",
+              "engLow": 2.0,
+              "engHigh": 3.5
+            },
+            {
+              "name": "Product_Temperature",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD8",
+              "engUnit": "°C",
+              "engLimitMode": "MinMax",
+              "engLow": 2.0,
+              "engHigh": 10.0
+            },
+            {
+              "name": "Capping_Torque",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD12",
+              "engUnit": "Nm",
+              "engLimitMode": "MinMax",
+              "engLow": 10.0,
+              "engHigh": 20.0
+            },
+            {
+              "name": "CO2_Level",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD16",
+              "engUnit": "volumes",
+              "engLimitMode": "MinMax",
+              "engLow": 3.0,
+              "engHigh": 5.0
+            }
+          ]
+        },
+        {
+          "name": "ProductionMetrics",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Bottles_Filled",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD20",
+              "engUnit": "count"
+            },
+            {
+              "name": "Bottles_Rejected",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD24",
+              "engUnit": "count"
+            },
+            {
+              "name": "Filling_Speed",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD28",
+              "engUnit": "BPH",
+              "engLimitMode": "MinMax",
+              "engLow": 700.0,
+              "engHigh": 1000.0
+            },
+            {
+              "name": "Fill_Accuracy",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD32",
+              "engUnit": "%",
+              "engLimitMode": "MinMax",
+              "engLow": 97.0,
+              "engHigh": 100.0
+            }
+          ]
+        },
+        {
+          "name": "MachineStatus",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Filler_Status",
+              "tagType": "AtomicTag",
+              "dataType": "String",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBB40"
+            },
+            {
+              "name": "Capper_Status",
+              "tagType": "AtomicTag",
+              "dataType": "String",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBB62"
+            },
+            {
+              "name": "Runtime_Minutes",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD70",
+              "engUnit": "minutes"
+            },
+            {
+              "name": "Downtime_Minutes",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD74",
+              "engUnit": "minutes"
+            }
+          ]
+        },
+        {
+          "name": "Defects",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Underfill_Count",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD78",
+              "engUnit": "count"
+            },
+            {
+              "name": "Overfill_Count",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD82",
+              "engUnit": "count"
+            },
+            {
+              "name": "Cap_Missing_Loose",
+              "tagType": "AtomicTag",
+              "dataType": "Int4",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD86",
+              "engUnit": "count"
+            }
+          ]
+        },
+        {
+          "name": "Tanks",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Product_Tank_Level",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD90",
+              "engUnit": "liters"
+            },
+            {
+              "name": "CIP_Tank_Level",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD94",
+              "engUnit": "liters"
+            },
+            {
+              "name": "CO2_Tank_Level",
+              "tagType": "AtomicTag",
+              "dataType": "Float8",
+              "valueSource": "opc",
+              "opcItemPath": "[PLC]DB120.DBD98",
+              "engUnit": "liters"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
