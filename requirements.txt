@@ -1,0 +1,7 @@
+# Krones ErgoBloc L OPC UA Simulator Dependencies
+asyncua>=1.0.4
+pandas>=2.2.0
+numpy>=1.26.0
+python-dateutil>=2.8.2
+pytz>=2023.3
+colorlog>=6.7.0
